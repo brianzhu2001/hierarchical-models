@@ -9,3 +9,6 @@ Run `npm run start` in this folder.
 
 ## Dependencies
 AnigraphV2 is included in this repo. This also requires node.js. All other dependencies can be found in [./package.json](./package.json) and installed by running `npm install` in this folder with node.js installed.
+
+## Sources
+AnigraphV2 is by Abe Davis. Abe Davis also wrote the view component of the web application.
