@@ -1,0 +1,104 @@
+{
+  "name": "CS4620Assignment2",
+  "version": "1.0.0",
+  "description": "CS4620 Assignment 2",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "jest --config ./configs/jest.config.json",
+    "start": "webpack-dev-server --mode development --config configs/webpack.config.js",
+    "rsol": "webpack-dev-server --mode development --config configs/rsol.webpack.config.js",
+    "creative": "webpack-dev-server --mode development --config configs/creative.webpack.config.js",
+    "core": "webpack-dev-server --mode development --config configs/core.webpack.config.js",
+    "build": "webpack --mode production --config configs/tersewebpack.config.js",
+    "open": "webpack-dev-server --mode development --config configs/tersewebpack.config.js --open",
+    "produce": "webpack --mode production --config configs/tersewebpack.config.js",
+    "watch": "webpack --watch",
+    "majestic": "majestic"
+  },
+  "author": "Abe Davis",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.6",
+    "@babel/plugin-proposal-class-properties": "^7.10.4",
+    "@babel/plugin-proposal-decorators": "^7.10.5",
+    "@babel/plugin-transform-runtime": "^7.11.0",
+    "@babel/preset-env": "^7.10.4",
+    "@babel/preset-react": "^7.10.4",
+    "@teclone/xml-serializer": "^1.3.0",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^26.2.2",
+    "babel-loader": "^8.1.0",
+    "canvas": "^2.6.1",
+    "clean-webpack-plugin": "^3.0.0",
+    "copy-webpack-plugin": "^6.1.1",
+    "css-loader": "^4.0.0",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.5",
+    "file-loader": "^6.0.0",
+    "html-webpack-plugin": "^4.3.0",
+    "imports-loader": "^1.1.0",
+    "jest": "^26.2.2",
+    "jest-environment-jsdom-fourteen": "^1.0.1",
+    "jsdom": "^16.4.0",
+    "majestic": "^1.7.0",
+    "react-test-renderer": "^16.13.1",
+    "style-loader": "^1.2.1",
+    "terser-webpack-plugin": "^4.2.2",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.11.2",
+    "bootstrap": "^4.5.2",
+    "file-saver": "^2.0.2",
+    "identity-obj-proxy": "^3.0.0",
+    "jquery": "^3.5.1",
+    "jsonfile": "^6.0.1",
+    "lodash": "^4.17.19",
+    "popper.js": "^1.16.1",
+    "react": "^16.13.1",
+    "react-color": "^2.18.1",
+    "react-dom": "^16.13.1",
+    "react-json-tree": "^0.12.0",
+    "react-sortable-tree": "^2.8.0",
+    "reactcss": "^1.2.3",
+    "rsuite": "^4.8.1",
+    "snapsvg": "^0.5.1",
+    "tinycolor2": "^1.4.1",
+    "two.js": "^0.7.0-stable.1",
+    "uuid": "^8.3.0"
+  },
+  "jest": {
+    "modulePaths": [
+      "/shared/vendor/modules"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "moduleDirectories": [
+      "node_modules",
+      "bower_components",
+      "shared"
+    ],
+    "transform": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/fileTransformer.js"
+    },
+    "moduleNameMapper": {
+      "\\.(jpg|jpeg|png|gif|eot|otf|webp|svg|ttf|woff|woff2|mp4|webm|wav|mp3|m4a|aac|oga)$": "<rootDir>/tests/__mocks__/fileMock.js",
+      "\\.(css|less)$": "<rootDir>/tests/__mocks__/styleMock.js",
+      "^react(.*)$": "<rootDir>/vendor/react-master$1",
+      "^config$": "<rootDir>/configs/app-config.js"
+    },
+    "setupFiles": [
+      "jest-canvas-mock"
+    ]
+  },
+  "majestic": {
+    "args": [
+      "--config=./configs/jest.config.json"
+    ]
+  }
+}

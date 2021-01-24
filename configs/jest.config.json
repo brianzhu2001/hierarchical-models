@@ -1,0 +1,12 @@
+{
+  "rootDir": "../",
+  "testRegex": "((\\.|/*.)(test))\\.js?$",
+  "moduleNameMapper": {
+    "\\.(css|less)$": "identity-obj-proxy",
+    "\\.(gif|ttf|eot|svg)$": "<rootDir>/tests/__mocks__/fileMock.js"
+  },
+  "setupFilesAfterEnv": [
+    "<rootDir>/tests/setupTests.js"
+  ],
+  "testEnvironment": "jest-environment-jsdom-fourteen"
+}
